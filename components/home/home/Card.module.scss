@@ -22,11 +22,17 @@
 }
 .sectionInfo {
   text-align: center;
-  padding: 20px;
+  padding: 20px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 250px;
+}
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 0px 0px 0px;
 }
 .content {
   width: 80%;

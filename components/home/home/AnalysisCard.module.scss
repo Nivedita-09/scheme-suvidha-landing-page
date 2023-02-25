@@ -1,0 +1,22 @@
+@import "../../../styles/variable.scss";
+
+.AnalysisCard {
+  width: 25%;
+  height: 100px;
+  background-color: $primary-color;
+  border-radius: 12px;
+  text-align: center;
+}
+.count {
+  padding: 4%;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Lora", serif;
+}
+.titleOfAnalysis {
+  padding: 2%;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 600;
+  font-size: 20px;
+}

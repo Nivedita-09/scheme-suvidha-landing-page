@@ -14,6 +14,7 @@ export default function Card({ image, subtitle, title, pageRoute }) {
             width={50}
             height={50}
           />
+          <div className={style.title}>{title}</div>
           <div className={style.content}>{subtitle}</div>
           <button className={style.learnMore_Btn}>Learn More</button>
         </div>
