@@ -1,18 +1,54 @@
 @import "../../../styles/variable.scss";
 .AddCardSection {
-  width: 25%;
-  height: 350px;
+  width: 20%;
+  //   height: 300px;
   background-color: #fff;
   border-radius: 30px;
   text-align: center;
+  padding: 3%;
   box-shadow: 3px 3px 3px 5px rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+  transition: 3s;
+}
+.AddCardSection:hover {
+  background-color: $heading-color;
 }
 .AddCardInfo {
-  //   justify-content: center;
-  //   align-items: center;
+  padding: 5%;
 }
 .AddCardImage {
   fill: #00a9bf !important;
   //   background-color: #00a9bf;
   stroke: #00a9bf !important;
+}
+.AddCardTitle {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: "Abhaya Libre", serif;
+  padding: 5%;
+}
+.AddCardContent {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Abhaya Libre", serif;
+  padding: 5%;
+}
+.AddCardBtn_Sec {
+  padding: 5%;
+}
+.AddCardBtn {
+  width: 100%;
+  padding: 5%;
+  background-color: $heading-color;
+  color: #fff;
+  font-family: "Abhaya Libre", serif;
+  border-radius: 12px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 3s;
+}
+.AddCardBtn:hover {
+  background-color: #fff;
+  color: $heading-color;
 }

@@ -9,8 +9,8 @@ export default function AddCard({ image, title, content, btnName }) {
         <Image
           src={image}
           alt="logo"
-          width={50}
-          height={50}
+          width={60}
+          height={60}
           className={style.AddCardImage}
         />
       </div>
