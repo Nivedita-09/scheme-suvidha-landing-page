@@ -25,8 +25,8 @@ export default function Footer() {
           </div>
           <div className={style.col_2}>
             <div className={style.col_title}>Contact Us</div>
-            <div className={style.col2_email}>Email: abc@abc.com </div>
-            <div className={style.col2_phoneNo}>Phone No: 98766552134</div>
+            <div className={style.col2_details}>Email: abc@abc.com </div>
+            <div className={style.col2_details}>Phone No: 98766552134</div>
           </div>
           <div className={style.col_3}>
             <div className={style.col_title}>Social Accounts</div>
@@ -39,26 +39,36 @@ export default function Footer() {
           <div className={style.col_4}>
             <div className={style.col4Btn}>
               <Link href="/" className={style.linkBtn}>
-                <button>
-                  <Image src={PlayStore} />
-                  Play Store
-                </button>
+                {/* <button> */}
+                <Image
+                  src={PlayStore}
+                  alt="Play Store"
+                  width={40}
+                  height={40}
+                />
+                Play Store
+                {/* </button> */}
               </Link>
             </div>
             <div className={style.col4Btn}>
               <Link href="/" className={style.linkBtn}>
-                <button>
-                  <Image src={AppStore} />
-                  App Store
-                </button>
+                {/* <button> */}
+                <Image src={AppStore} alt="App Store" width={40} height={40} />
+                App Store
+                {/* </button> */}
               </Link>
             </div>
             <div className={style.col4Btn}>
               <Link href="/" className={style.linkBtn}>
-                <button>
-                  <Image src={AgentLogin} />
-                  Agent Login
-                </button>
+                {/* <button> */}
+                <Image
+                  src={AgentLogin}
+                  alt="Agent Login"
+                  width={40}
+                  height={40}
+                />
+                Agent Login
+                {/* </button> */}
               </Link>
             </div>
           </div>
