@@ -2,7 +2,7 @@ import React from "react";
 import style from "./NgoCard.module.scss";
 import Image from "next/image";
 
-export default function NgoCard({ data }) {
+export default function NgoCard({ data, viewCard }) {
   return (
     <>
       <div className={style.card}>
@@ -24,7 +24,9 @@ export default function NgoCard({ data }) {
             <div className={style.btn_div}>
               <div className={style.ngodetail}>Founder: {data.ngoFounder}</div>
               <div className={style.viewNgo_div}>
-                <button className={style.viewNgo}>View</button>
+                <button className={style.viewNgo} onClick={viewCard}>
+                  View
+                </button>
               </div>
             </div>
             <div className={style.ngoDetail_div}>

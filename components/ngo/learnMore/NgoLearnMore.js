@@ -4,7 +4,13 @@ import Image from "next/image";
 import { NgoCardData } from "../data/NgoCardData";
 import NgoCard from "../data/NgoCard";
 import Ngo from "../../../assets/icons/Ngo.svg";
+// import View_Ngo from "@/pages/View_Ngo";
+import Router from "next/router";
+
 export default function NgoLearnMore() {
+  function handleClick() {
+    Router.push("/View_Ngo");
+  }
   return (
     <>
       <div className={style.NgoLearnMore}>
@@ -26,8 +32,8 @@ export default function NgoLearnMore() {
         <div className={style.second_section}>
           <div className={style.NgoListTitle}>Our Top NGO List</div>
           <div className={style.NgoCardGrid}>
-            {NgoCardData.map((data) => (
-              <NgoCard data={data} />
+            {NgoCardData.map((data, index) => (
+              <NgoCard data={data} key={index} viewCard={handleClick} />
             ))}
           </div>
         </div>

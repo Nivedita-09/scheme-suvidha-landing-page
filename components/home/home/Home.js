@@ -8,12 +8,16 @@ import AnalysisInfo from "./AnalysisInfo";
 import dynamic from "next/dynamic";
 import { AddCardData } from "./AddCardData";
 import AddCard from "./AddCard";
+import Router from "next/router";
 
 const TerminalComponent = dynamic(() => import("./Homecs"), {
   ssr: false,
 });
 
 export default function HomePage() {
+  function handleClick() {
+    Router.push("/Register_Ngo");
+  }
   return (
     <>
       <div className={style.first_section}>
@@ -74,6 +78,7 @@ export default function HomePage() {
           title={AddCardData[0].title}
           content={AddCardData[0].content}
           btnName={AddCardData[0].btnName}
+          register={handleClick}
         />
         <AddCard
           image={AddCardData[1].image}
