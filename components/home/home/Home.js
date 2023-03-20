@@ -18,6 +18,9 @@ export default function HomePage() {
   function handleClick() {
     Router.push("/Register_Ngo");
   }
+  function handleOnClick() {
+    Router.push("/Register_Camps");
+  }
   return (
     <>
       <div className={style.first_section}>
@@ -85,6 +88,7 @@ export default function HomePage() {
           title={AddCardData[1].title}
           content={AddCardData[1].content}
           btnName={AddCardData[1].btnName}
+          register={handleOnClick}
         />
       </div>
     </>

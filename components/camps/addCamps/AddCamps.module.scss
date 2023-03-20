@@ -1,0 +1,71 @@
+@import "../../../styles/variable.scss";
+.AddCamps {
+  width: 95%;
+  justify-content: center;
+  margin: auto;
+  border: 5px solid $heading-color;
+}
+.camps_form_div {
+  margin: 2%;
+}
+.CampTitle {
+  padding: 1%;
+  //   margin: auto;
+  //   width: 95%;
+  border-radius: 15px;
+  background-color: $secondary-color;
+  font-size: 26px;
+  font-family: "Lora", serif;
+  font-weight: 900;
+  text-align: center;
+}
+.camps_form_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
+}
+.camps_left_section {
+  width: 45%;
+}
+.camps_right_section {
+  width: 45%;
+}
+.camp_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+.camp_label {
+  font-family: "Abhaya Libre", serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.camp_input {
+  padding: 2%;
+  border: none;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+.camp_textarea {
+  height: 150px;
+  border: none;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+.datepicker_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.datepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.camp_input_date {
+  padding: 5%;
+  border: none;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}

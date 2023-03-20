@@ -4,7 +4,6 @@ import Image from "next/image";
 import { NgoCardData } from "../data/NgoCardData";
 import NgoCard from "../data/NgoCard";
 import Ngo from "../../../assets/icons/Ngo.svg";
-// import View_Ngo from "@/pages/View_Ngo";
 import Router from "next/router";
 
 export default function NgoLearnMore() {
