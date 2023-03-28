@@ -1,6 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  reactStrictMode: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+      },
+    ],
+  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/",
 
-module.exports = nextConfig
+  //       permanent: false,
+  //     },
+  //   ];
+  // },
+};
+
+module.exports = nextConfig;

@@ -16,7 +16,9 @@ export default function Card({ image, subtitle, title, pageRoute }) {
           />
           <div className={style.title}>{title}</div>
           <div className={style.content}>{subtitle}</div>
-          <button className={style.learnMore_Btn}>Learn More</button>
+          <button className={style.learnMore_Btn} onClick={pageRoute}>
+            Learn More
+          </button>
         </div>
       </div>
     </>

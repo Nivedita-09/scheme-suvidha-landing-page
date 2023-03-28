@@ -1,12 +1,21 @@
 import React from "react";
 import style from "./Home.module.scss";
-import { CardData } from "./CardData";
+import { CardData, NgaoInfo, schemeInfo, UpdateInfo } from "./CardData";
 import Card from "./Card";
-import { AnalysisCardData } from "./AnalysisCardData";
+import {
+  AnalysisCardData,
+  BenefitsAnalysisCardData,
+  NGOAnalysisCardData,
+  RegistrationAnalysisCardData,
+} from "./AnalysisCardData";
 import AnalysisCard from "./AnalysisCard";
 import AnalysisInfo from "./AnalysisInfo";
 import dynamic from "next/dynamic";
-import { AddCardData } from "./AddCardData";
+import {
+  AddCardData,
+  CampaignsAddCardData,
+  NgoAddCardData,
+} from "./AddCardData";
 import AddCard from "./AddCard";
 import Router from "next/router";
 
@@ -15,12 +24,6 @@ const TerminalComponent = dynamic(() => import("./Homecs"), {
 });
 
 export default function HomePage() {
-  function handleClick() {
-    Router.push("/Register_Ngo");
-  }
-  function handleOnClick() {
-    Router.push("/Register_Camps");
-  }
   return (
     <>
       <div className={style.first_section}>
@@ -30,35 +33,38 @@ export default function HomePage() {
         <div className={style.subsection2}>
           <div className={style.CardGrid}>
             <Card
-              image={CardData[0].image}
-              subtitle={CardData[0].content}
-              title={CardData[0].title}
+              image={NgaoInfo.image}
+              subtitle={NgaoInfo.content}
+              title={NgaoInfo.title}
+              pageRoute={() =>  Router.push("/Ngo_Learn_More")}
             />
             <Card
-              image={CardData[1].image}
-              subtitle={CardData[1].content}
-              title={CardData[1].title}
+              image={UpdateInfo.image}
+              subtitle={UpdateInfo.content}
+              title={UpdateInfo.title}
+              // pageRoute={() =>  Router.push("/Ngo_Learn_More")}
             />
             <Card
-              image={CardData[2].image}
-              subtitle={CardData[2].content}
-              title={CardData[2].title}
+              image={schemeInfo.image}
+              subtitle={schemeInfo.content}
+              title={schemeInfo.title}
+              pageRoute={() =>  Router.push("/Scheme_Learn_More")}
             />
           </div>
         </div>
       </div>
       <div className={style.second_section}>
         <AnalysisCard
-          count={AnalysisCardData[0].count}
-          titleOfAnalysis={AnalysisCardData[0].titleOfAnalysis}
+          count={BenefitsAnalysisCardData.count}
+          titleOfAnalysis={BenefitsAnalysisCardData.titleOfAnalysis}
         />
         <AnalysisCard
-          count={AnalysisCardData[1].count}
-          titleOfAnalysis={AnalysisCardData[1].titleOfAnalysis}
+          count={NGOAnalysisCardData.count}
+          titleOfAnalysis={NGOAnalysisCardData.titleOfAnalysis}
         />
         <AnalysisCard
-          count={AnalysisCardData[2].count}
-          titleOfAnalysis={AnalysisCardData[2].titleOfAnalysis}
+          count={RegistrationAnalysisCardData.count}
+          titleOfAnalysis={RegistrationAnalysisCardData.titleOfAnalysis}
         />
       </div>
       <div className={style.Analysis}>
@@ -77,18 +83,18 @@ export default function HomePage() {
       </div>
       <div className={style.AddCard_Div}>
         <AddCard
-          image={AddCardData[0].image}
-          title={AddCardData[0].title}
-          content={AddCardData[0].content}
-          btnName={AddCardData[0].btnName}
-          register={handleClick}
+          image={NgoAddCardData.image}
+          title={NgoAddCardData.title}
+          content={NgoAddCardData.content}
+          btnName={NgoAddCardData.btnName}
+          register={() => Router.push("/Register_Ngo")}
         />
         <AddCard
-          image={AddCardData[1].image}
-          title={AddCardData[1].title}
-          content={AddCardData[1].content}
-          btnName={AddCardData[1].btnName}
-          register={handleOnClick}
+          image={CampaignsAddCardData.image}
+          title={CampaignsAddCardData.title}
+          content={CampaignsAddCardData.content}
+          btnName={CampaignsAddCardData.btnName}
+          register={()=>  Router.push("/Register_Camps")}
         />
       </div>
     </>
