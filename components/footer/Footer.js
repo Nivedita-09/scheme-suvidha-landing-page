@@ -67,7 +67,7 @@ export default function Footer() {
                   width={40}
                   height={40}
                 />
-                Agent Login
+                Admin Login
                 {/* </button> */}
               </Link>
             </div>
