@@ -59,7 +59,10 @@ export default function Footer() {
               </Link>
             </div>
             <div className={style.col4Btn}>
-              <Link href="/" className={style.linkBtn}>
+              <Link
+                href="https://scheme-suvidha-web.vercel.app/login"
+                className={style.linkBtn}
+              >
                 {/* <button> */}
                 <Image
                   src={AgentLogin}
