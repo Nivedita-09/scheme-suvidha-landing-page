@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Home.module.scss";
 import { CardData, NgaoInfo, schemeInfo, UpdateInfo } from "./CardData";
 import Card from "./Card";
@@ -18,25 +18,40 @@ import {
 } from "./AddCardData";
 import AddCard from "./AddCard";
 import Router from "next/router";
+import Image from "next/image";
+import HomeCs from "./Homecs";
 
-const TerminalComponent = dynamic(() => import("./Homecs"), {
-  ssr: false,
-});
+// const TerminalComponent = dynamic(() => import("./Homecs"), {
+//   ssr: false,
+// });
 
 export default function HomePage() {
+  // const [imageIndex, setImageIndex] = useState(0);
+  // const images = [{ Image1 }, { Image2 }, { Image3 }, { Image4 }];
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 5000);
+
+  //   return () => clearInterval(intervalId);
+  // }, []);
   return (
     <>
       <div className={style.first_section}>
         <div className={style.subsection1}>
-          <TerminalComponent />
+          <HomeCs />
         </div>
+        {/* <div className={style.subsection1}>
+          <Image src={images[imageIndex]} alt="Dissolving Image" />
+        </div> */}
         <div className={style.subsection2}>
           <div className={style.CardGrid}>
             <Card
               image={NgaoInfo.image}
               subtitle={NgaoInfo.content}
               title={NgaoInfo.title}
-              pageRoute={() =>  Router.push("/Ngo_Learn_More")}
+              pageRoute={() => Router.push("/Ngo_Learn_More")}
             />
             <Card
               image={UpdateInfo.image}
@@ -48,7 +63,7 @@ export default function HomePage() {
               image={schemeInfo.image}
               subtitle={schemeInfo.content}
               title={schemeInfo.title}
-              pageRoute={() =>  Router.push("/Scheme_Learn_More")}
+              pageRoute={() => Router.push("/Scheme_Learn_More")}
             />
           </div>
         </div>
@@ -94,7 +109,7 @@ export default function HomePage() {
           title={CampaignsAddCardData.title}
           content={CampaignsAddCardData.content}
           btnName={CampaignsAddCardData.btnName}
-          register={()=>  Router.push("/Register_Camps")}
+          register={() => Router.push("/Register_Camps")}
         />
       </div>
     </>

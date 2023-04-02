@@ -3,28 +3,46 @@ import Image2 from "../../../assets/images/Image2.jpg";
 import Image3 from "../../../assets/images/Image3.jpg";
 import Image4 from "../../../assets/images/Image4.jpg";
 import Image from "next/image";
-import { Carousel } from "rs-3d-react-carousal";
-
+// import { Carousel } from "rs-3d-react-carousal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
 // import Carousel from "react-spring-3d-carousel";
 
 export default function HomeCs() {
-  let slides = [
-    <img src="https://unsplash.com/photos/O7ke8N4kTpQ" alt="1" />,
-    <img src="https://unsplash.com/photos/SBIak0pKUIE" alt="2" />,
-    <img src="https://unsplash.com/photos/COmEXrbCtf4" alt="3" />,
-    <img src="https://unsplash.com/photos/9jSr5CZsr6k" alt="4" />,
-    <img src="https://unsplash.com/photos/ac_GAb-SBes" alt="5" />,
-  ];
+  const [index, setIndex] = useState(0);
 
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
-      {/* <Carousel slides={slides} /> */}
-      <Carousel
-        slides={slides}
-        autoplay={true}
-        interval={5000}
-        // onSlideChange={callback}
-      />
+      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false}>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            src={Image1}
+            alt="First slide"
+            height={600}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            src={Image2}
+            alt="Second slide"
+            height={600}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            src={Image3}
+            alt="Third slide"
+            height={600}
+          />
+        </Carousel.Item>
+      </Carousel>
     </>
   );
 }

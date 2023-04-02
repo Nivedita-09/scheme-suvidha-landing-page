@@ -1,6 +1,6 @@
 @import "../../../styles/variable.scss";
 .first_section {
-  height: 700px;
+  height: 900px;
   width: 100%;
   // background-color: yellow;
 }
@@ -14,7 +14,7 @@
   width: 100%;
   // background-color: red;
   position: absolute;
-  top: 50%;
+  top: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
