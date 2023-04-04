@@ -57,7 +57,7 @@ export default function HomePage() {
               image={UpdateInfo.image}
               subtitle={UpdateInfo.content}
               title={UpdateInfo.title}
-              // pageRoute={() =>  Router.push("/Ngo_Learn_More")}
+              pageRoute={() => Router.push("/AboutUs")}
             />
             <Card
               image={schemeInfo.image}

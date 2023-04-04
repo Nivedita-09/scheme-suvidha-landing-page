@@ -1,0 +1,47 @@
+@import "../../../styles/variable.scss";
+
+.SchemeLearnMore {
+  padding: 2%;
+}
+.first_section {
+  justify-content: center;
+}
+.section_title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.icons {
+  fill: #00a9bf;
+}
+.Title {
+  font-family: "Lora", serif;
+  font-size: 36px;
+  font-weight: 800;
+  align-self: center;
+}
+.SchemeContent {
+  width: 90%;
+  margin: auto;
+  font-family: "Abhaya Libre", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+.second_section {
+  margin: 3%;
+}
+.SchemeListTitle {
+  margin: auto;
+  width: 80%;
+  padding: 1%;
+  border-radius: 15px;
+  background-color: $secondary-color;
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.SchemeCardGrid {
+  margin: auto;
+}

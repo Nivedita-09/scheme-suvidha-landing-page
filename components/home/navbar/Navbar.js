@@ -19,17 +19,17 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={style.li}>
-              <Link href="/" className={style.a}>
+              <Link href="/Scheme_Learn_More" className={style.a}>
                 Schemes
               </Link>
             </li>
             <li className={style.li}>
-              <Link className={style.a} href="/">
-                Analysis
+              <Link className={style.a} href="/Ngo_Learn_More">
+                Ngos
               </Link>
             </li>
             <li className={style.li}>
-              <Link className={style.a} href="/">
+              <Link className={style.a} href="/AboutUs">
                 About Us
               </Link>
             </li>
