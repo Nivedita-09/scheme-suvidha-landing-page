@@ -34,7 +34,7 @@ export default function SchemeLearnMore() {
           </div>
         </div>
         <div className={style.second_section}>
-          <div className={style.SchemeListTitle}>Our Top NGO List</div>
+          <div className={style.SchemeListTitle}>Our Top SCHEMES List</div>
           <div className={style.SchemeCardGrid}>
             {SchemeCardData.map((data, index) => (
               <SchemeCard data={data} key={index} />
