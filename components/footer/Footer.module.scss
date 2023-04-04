@@ -50,3 +50,8 @@
 }
 .col_4 {
 }
+@media only screen and (max-width: 480px) {
+  .Footer {
+    display: none;
+  }
+}

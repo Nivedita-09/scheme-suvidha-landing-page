@@ -30,7 +30,7 @@ export default function Navbar() {
             </li>
             <li className={style.li}>
               <Link className={style.a} href="/">
-                Contact Us
+                About Us
               </Link>
             </li>
           </ul>

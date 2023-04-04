@@ -97,3 +97,8 @@
 .nav_links {
   align-self: center;
 }
+@media only screen and (max-width: 480px) {
+  .nav_links {
+    display: none;
+  }
+}
