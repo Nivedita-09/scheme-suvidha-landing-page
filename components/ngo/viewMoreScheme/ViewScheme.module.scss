@@ -1,2 +1,35 @@
 @import "../../../styles/variable.scss";
 
+.ViewScheme {
+  padding: 2%;
+}
+.Heading {
+  text-align: center;
+  font-size: 34px;
+  font-family: "Lora", serif;
+  font-weight: bolder;
+  color: $heading-color;
+}
+.viewscheme_div {
+  text-align: center;
+  padding: 1%;
+}
+.SchemeName {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: "Abhaya Libre", serif;
+}
+.SchemeInformation {
+  padding: 1% 2% 1% 1%;
+}
+
+.subheading {
+  font-size: 22px;
+  font-family: "Lora", serif;
+  font-weight: bolder;
+}
+.content {
+  font-size: 16px;
+  font-family: "Abhaya Libre", serif;
+}

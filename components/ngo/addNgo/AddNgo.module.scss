@@ -86,7 +86,6 @@
 .uploadDiv {
   width: 50%;
   justify-content: center;
-
   padding: 20px;
 }
 .uploadSection {
@@ -115,4 +114,19 @@
   padding: 5% 20%;
   cursor: pointer;
   border: none;
+}
+.submit_Div {
+  text-align: center;
+}
+.SubmitBtn {
+  width: 15%;
+  padding: 1%;
+  text-align: center;
+  background-color: $heading-color;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-size: 28px;
 }

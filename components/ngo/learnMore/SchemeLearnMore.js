@@ -7,9 +7,9 @@ import Scheme from "../../../assets/icons/Scheme.svg";
 import Router from "next/router";
 
 export default function SchemeLearnMore() {
-  // function handleClick() {
-  //   Router.push("/View_Scheme");
-  // }
+  function handleClick() {
+    Router.push("/View_Scheme");
+  }
   return (
     <>
       <div className={style.SchemeLearnMore}>
@@ -37,7 +37,7 @@ export default function SchemeLearnMore() {
           <div className={style.SchemeListTitle}>Our Top SCHEMES List</div>
           <div className={style.SchemeCardGrid}>
             {SchemeCardData.map((data, index) => (
-              <SchemeCard data={data} key={index} />
+              <SchemeCard data={data} key={index} viewCard={handleClick} />
             ))}
           </div>
         </div>

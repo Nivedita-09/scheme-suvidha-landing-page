@@ -411,8 +411,8 @@ export default function AddNgo() {
               </div>
             </div>
           </div>
-          <div>
-            <input type="submit" onClick={submit} />
+          <div className={style.submit_Div}>
+            <input type="submit" onClick={submit} className={style.SubmitBtn} />
           </div>
         </form>
       </div>
