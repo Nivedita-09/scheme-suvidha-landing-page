@@ -5,7 +5,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { BsFillCloudArrowUpFill } from "react-icons/bs";
 import { uploadCampData } from "@/api/uploadCampData";
-
+import TimePicker from "react-time-picker";
+import "react-time-picker/dist/TimePicker.css";
+import "react-clock/dist/Clock.css";
+import moment from "moment/moment";
 const campcategory = [
   "All",
   "Health Checkup",
@@ -14,9 +17,11 @@ const campcategory = [
 ];
 
 export default function AddCamps() {
-  // const [select, setSelect] = useState(campcategory[0]);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const initDate = new Date();
+  var [startDate, setStartDate] = useState(new Date());
+  var [endDate, setEndDate] = useState(new Date());
+  const [from, setFrom] = useState("");
+  const [till, setTill] = useState("");
   const [campTemplate, setCampTemplate] = useState("");
   const [campDetails, setCampDetails] = useState({
     CategoryCamp: campcategory[0],
@@ -42,9 +47,7 @@ export default function AddCamps() {
   function pick_campTemplate(event) {
     setCampTemplate(Event.target.files[0]);
   }
-  function pick_startDate(event) {
-    setStartDate(Event.target.value);
-  }
+
   const submit = async () => {
     await uploadCampData({
       campDetails: campDetails,
@@ -126,42 +129,37 @@ export default function AddCamps() {
                   <div className={style.datepicker}>
                     <label>Start Date</label>
                     <DatePicker
-                      selected={campDetails["StartDate"]}
-                      // onChange={(e) =>
-                      //   setStartDate({
-                      //     ...campDetails,
-                      //     StartDate: e.target.value,
-                      //   })
-                      // }
-                      onChange={pick_startDate}
+                      value={initDate}
+                      selected={startDate}
+                      onChange={(Date) => {
+                        setStartDate(Date);
+                        setCampDetails({
+                          ...campDetails,
+                          StartDate: `${Date.getDate()}/${
+                            Date.getMonth() + 1
+                          }/${Date.getFullYear()}`,
+                        });
+                      }}
                       dateFormat="dd/MM/yyyy"
                       className={style.camp_input_date}
                     />
-                    {/* <input
-                      type="date"
-                      value={campDetails["StartDate"]}
-                      onChange={(e) =>
-                        setCampDetails({
-                          ...campDetails,
-                          StartDate: e.target.value,
-                        })
-                      }
-                      className={style.camp_input_date}
-                    /> */}
                   </div>
                   <div className={style.datepicker}>
                     <label>End Date</label>
 
-                    <input
-                      type="date"
-                      format="dd/mm/yyyy"
-                      value={campDetails["EndDate"]}
-                      onChange={(e) =>
+                    <DatePicker
+                      value={initDate}
+                      selected={endDate}
+                      onChange={(Date) => {
+                        setEndDate(Date);
                         setCampDetails({
                           ...campDetails,
-                          EndDate: e.target.value,
-                        })
-                      }
+                          EndDate: `${Date.getDate()}/${
+                            Date.getMonth() + 1
+                          }/${Date.getFullYear()}`,
+                        });
+                      }}
+                      dateFormat="dd/MM/yyyy"
                       className={style.camp_input_date}
                     />
                   </div>
@@ -224,30 +222,30 @@ export default function AddCamps() {
                 <div className={style.datepicker_div}>
                   <div className={style.datepicker}>
                     <label>From</label>
-                    <input
-                      type="time"
-                      value={campDetails["CampFrom"]}
-                      onChange={(e) =>
-                        setCampDetails({
-                          ...campDetails,
-                          CampFrom: e.target.value,
-                        })
-                      }
-                      className={style.camp_input_date}
+
+                    <TimePicker
+                      onChange={(from) => {
+                        setFrom(from);
+                        setCampDetails({ ...campDetails, CampFrom: from });
+                      }}
+                      value={from}
+                      amPmAriaLabel="Select AM/PM"
+                      format="h:mm a"
+                      disableClock={false}
                     />
                   </div>
                   <div className={style.datepicker}>
                     <label>Till</label>
-                    <input
-                      type="time"
-                      value={campDetails["CampTill"]}
-                      onChange={(e) =>
-                        setCampDetails({
-                          ...campDetails,
-                          CampTill: e.target.value,
-                        })
-                      }
-                      className={style.camp_input_date}
+                    <TimePicker
+                      onChange={(till) => {
+                        setTill(till);
+                        setCampDetails({ ...campDetails, CampTill: till });
+                      }}
+                      value={till}
+                      amPmAriaLabel="Select AM/PM"
+                      hour12Clock={true}
+                      format="h:mm a"
+                      disableClock={false}
                     />
                   </div>
                 </div>
