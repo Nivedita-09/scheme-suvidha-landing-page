@@ -45,7 +45,7 @@ export default function AddCamps() {
   } = useForm();
 
   function pick_campTemplate(event) {
-    setCampTemplate(Event.target.files[0]);
+    setCampTemplate(event.target.files[0]);
   }
 
   const submit = async () => {
