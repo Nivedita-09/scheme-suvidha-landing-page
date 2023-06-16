@@ -136,6 +136,9 @@ export default function About_Us() {
             are self verified.
           </div>
         </div>
+        <div>
+          
+        </div>
       </div>
     </>
   );
